@@ -1,11 +1,13 @@
+require('dotenv').config(); 
+
 const { createClient } = require('@supabase/supabase-js');
 const Groq = require("groq-sdk");
 
 // --- Initialize Groq ---
-const groq = new Groq({ apiKey: process.env.REACT_APP_GROQ_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
-const supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 

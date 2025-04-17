@@ -1,6 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const WriteDatabase = require('./WriteDatabase'); // ✅ Adjust path if needed
+
+
 
 const app = express();
 const PORT = 4000;
